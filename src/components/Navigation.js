@@ -10,7 +10,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSetRoute: (event) => dispatch(setRoute(event.target.value))
+        onSetRoute: (event) => {
+            dispatch(setRoute(event.target.id))
+        }
     }
 }
 
@@ -18,19 +20,30 @@ class Navigation extends React.Component {
     render() {
         const { onSetRoute, route } = this.props;
         const renderSignOut = () => {
-            if(route==="Sign in"){
-                return <li className="right pointer"
-                onClick={onSetRoute}>Sign out</li>
+            if(route!=='login'){
+                return <button
+                    className="f4 pointer mr3"
+                    id='login'
+                    onClick={onSetRoute}
+                >Sign out</button>
             }
         }
 
         return (
-            <nav className='navbar'>
-                <ul>
-                    <li className="pointer">Home</li>
-                    <li className="pointer">Settings</li>
+            <nav className='navbar flex justify-between'>
+                <div className='flex'>
+                    <button 
+                        className="f4 pointer mr3"
+                        id='home'
+                        onClick={onSetRoute}
+                    >Home</button>
+                    <button
+                        className="f4 pointer mr3"
+                        id='settings'
+                        onClick={onSetRoute}
+                    >Settings</button>
                     {renderSignOut()}
-                </ul>
+                </div>
             </nav>
         )
     }

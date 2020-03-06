@@ -2,8 +2,20 @@ import { ROUTE, IS_LOGGED_IN } from './constants';
 
 //reducers takes an action and outputs a state.
 const initialState = {
-    route: 'Log Out',
-    isLoggedIn: false
+    route: 'login',
+    isLoggedIn: false,
+    subList: [
+        {
+            id: 1,
+            name: "Netflix",
+            price: '$12.00'
+        },
+        {
+            id: 2,
+            name: "Crunchyroll",
+            price: '$8.00'
+        }
+    ]
 }
 
 export const changeRoute = (state=initialState, action={}) => {

@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import '../styles/App.scss';
@@ -19,16 +19,18 @@ class App extends Component {
         const { route } = this.props;
 
         const renderMain = ()=>{
-            if(route === 'Sign in'){
-                return <List />
+            switch(route) {
+                case ('home'):
+                    return <List />
+                default:
+                    return <LogIn />
             }
-            else return <LogIn />
         }
 
         return (
             <Fragment>
                 <Navigation />
-                <div className='main tc'>
+                <div className='flex flex-wrap main tc'>
                     {renderMain()}
                 </div>
             </Fragment>
