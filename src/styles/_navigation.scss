@@ -1,0 +1,30 @@
+.navbar {
+    overflow: hidden;
+    background-color: $off-black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: $header-font;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    float: left;
+    display: block;
+    color: $off-white;
+    padding: 1rem;
+    text-decoration: none;
+}
+  
+.navbar li:hover {
+    background: $off-white;
+    color: $off-black;
+}
+
+.navbar .right {
+    float: right;
+}

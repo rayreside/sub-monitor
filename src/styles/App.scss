@@ -1,0 +1,16 @@
+@import 'vars';
+@import 'navigation';
+@import 'main';
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  width: 100%
+}
+
+body {
+  margin: 0;
+  @include font($main-font);
+  @extend %dark-mode;
+  text-align: center;
+}

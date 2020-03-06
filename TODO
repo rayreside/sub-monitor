@@ -1,0 +1,42 @@
+process:
+    a. user registers
+        1. username
+        2. password and confirmation
+        3. email?
+    b. user signs in
+        1. username
+        2. password
+    ca. user views sub list
+        1. subscriptions
+        2. prices
+        3. date
+        4. price sum for current month
+    cb. user adds subscription info
+        1. service name
+        2. price
+        3. date
+        4. frequency
+    cc. user edits sub
+        1. modify fields
+        2. pause
+        3. delete
+
+components:
+    a. homepage
+        1. sign in
+        2. register
+        3. description
+    b. sublist
+        1. list item
+        2. edit
+        3. pause
+        4. delete
+        5. price sum
+    c. nav
+        1. sign out
+        2. night mode
+        3. account settings
+    d. account settings
+        1. change password
+        2. delete account
+

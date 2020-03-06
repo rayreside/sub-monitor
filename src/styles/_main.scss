@@ -1,0 +1,14 @@
+.main {
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+.aside {
+    @extend %light-mode;
+}
+
+.banner {
+    flex-grow: 1;
+}

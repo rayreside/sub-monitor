@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&family=M+PLUS+1p&display=swap');
+$header-font: 'Kosugi', sans-serif;
+$main-font: 'M PLUS 1p', sans-serif;
+
+$off-white: #f1ede9;
+$off-black: #212121;
+
+$igor-pink: #fab6cb;
+$mono-white: #fdf9f3;
+$mono-yellow: #ffd866;
+$mono-green: #a9dc76;
+$mono-blue: #78dce8;
+$mono-purple: #ab9df2;
+
+%light-mode {
+    color: $off-black;
+    background-color: $off-white;
+}
+
+%dark-mode {
+    color: $off-white;
+    background-color: $off-black;
+}
+  
+@mixin font($font) {
+    font-family: $font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
